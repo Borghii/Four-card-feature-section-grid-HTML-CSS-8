@@ -1,0 +1,315 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    font-size: clamp(0.75rem, 0.75rem + 1.5vw, 2rem);
+    background-color: hsl(207, 16%, 89%);
+
+
+
+    display: grid;
+
+    grid-template-areas:"title"
+                        "supervisor"
+                        "builder"
+                        "karma"
+                        "calculator" ;
+
+    gap: 2em;
+
+    padding: 2em;
+    
+}
+
+
+h1{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    span{
+        font-weight: 200;
+
+    }
+}
+
+h2{
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 200;
+}
+
+img{
+    max-width: 6rem;
+    width: 5rem;
+}
+
+
+
+.cards-supervisor-flex,
+.cards-team-builder,
+.cards-karma,
+.cards-calculator-flex {
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 0.5em;
+    box-shadow: 0 0.3em 10px rgba(0, 0, 0, 0.441) ;
+    border-top: 0.3em solid white;
+
+    padding: 1.7em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    text-align: left;
+    position: relative;
+
+    min-height: 10em;
+
+
+
+    img {
+        position: absolute;
+        bottom: 2em; /* Ajusta la posición vertical */
+        right: 2em; /* La coloca en la esquina derecha */
+    }
+
+    
+
+   
+}
+
+.title-flex{
+    background-color:  hsl(207, 16%, 89%);
+    border-radius: 0.5em;
+    grid-area: title;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5em;
+    
+
+}
+
+.cards-supervisor-flex{
+    grid-area: supervisor;
+    border-top-color: hsl(180, 62%, 55%);
+}
+
+.cards-team-builder{
+    grid-area: builder;
+    border-top-color:  hsl(0, 78%, 62%);
+}
+
+.cards-karma{
+    grid-area: karma;
+    border-top-color: hsl(34, 97%, 64%);
+}
+
+.cards-calculator-flex{
+    grid-area: calculator;
+    border-top-color: hsl(212, 86%, 64%);
+}
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 10px; 
+    left: 0;
+    width: 100%;
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width:500px ){
+
+    html{
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width:700px ){
+
+    html{
+        font-size: 25px;
+    }
+
+}
+
+@media (min-width:700px ){
+
+    html{
+        font-size: 29px;
+    }
+
+}
+
+
+
+
+@media (min-width:1200px ){
+
+
+    html{
+        font-size: 15px;
+        display: flex;
+
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        min-height: 100vh;
+
+        position: relative;
+        
+    }
+
+
+
+    body{
+
+        min-height: auto;
+
+        grid-template-areas:"title title title"
+                            "supervisor builder calculator"
+                            "supervisor karma calculator" ;
+        
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: 150px repeat(2, 250px);
+
+        
+
+        gap: 1em;
+
+        padding: 0;
+
+
+
+    }
+
+
+
+
+    .title-flex{
+        width: 100%;
+        gap: 0.5em;
+
+        h1{
+            font-size: 2rem;
+            width: 40%;
+      
+        }
+
+        .p-title{
+            width: 40%;
+        }
+
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 2em;
+        
+    
+    }
+
+
+
+
+
+
+    .cards-supervisor-flex,
+.cards-team-builder,
+.cards-karma,
+.cards-calculator-flex {
+    padding: 1em;
+
+    min-height: 0;
+
+    height: 11rem;
+
+    
+
+    img{
+        position: absolute;
+        bottom: 1em; /* Ajusta la posición vertical */
+        right: 1em; /* La coloca en la esquina derecha */
+        max-width: 6rem;
+        width: 3.5rem;
+    }
+
+
+    border-width: 0.15em ;
+
+
+
+
+}
+
+
+
+.cards-supervisor-flex,
+.cards-calculator-flex{
+
+    margin: auto 0;
+
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 10px; 
+    left: 0;
+    width: 100%;
+    font-size: 11px; 
+    text-align: center;
+
+    margin-bottom: -70px;
+}
+
+
+
+
+
+}
